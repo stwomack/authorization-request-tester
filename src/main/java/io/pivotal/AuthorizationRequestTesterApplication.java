@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.IOException;
 
 @SpringBootApplication
-public class AuthorizationRequestWorkerApplication {
+public class AuthorizationRequestTesterApplication {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		SpringApplication.run(AuthorizationRequestWorkerApplication.class, args);
+		SpringApplication.run(AuthorizationRequestTesterApplication.class, args);
 	}
 }

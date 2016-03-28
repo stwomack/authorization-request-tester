@@ -24,8 +24,8 @@ public class OutputProcessorTester {
 
     @Bean
     @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedDelay = "${fixedDelay}", maxMessagesPerPoll = "1"))
-    public MessageSource<String> go() throws IOException {
-        return () -> new GenericMessage<>(createTestPayload().toString());
+    public MessageSource<AuthorizationRequest> go() throws IOException {
+        return () -> new GenericMessage<>(createTestPayload());
     }
 
     public AuthorizationRequest createTestPayload() {

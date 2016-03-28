@@ -1,5 +1,6 @@
 package io.pivotal.service;
 
+import io.pivotal.domain.AuthorizationRequest;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.cloud.cloudfoundry.com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -9,7 +10,6 @@ import org.springframework.integration.annotation.InboundChannelAdapter;
 import org.springframework.integration.annotation.Poller;
 import org.springframework.integration.core.MessageSource;
 import org.springframework.messaging.support.GenericMessage;
-import io.pivotal.domain.AuthorizationRequest;
 
 import java.io.IOException;
 import java.util.Date;
@@ -28,7 +28,7 @@ public class OutputProcessorTester {
 
     public AuthorizationRequest createTestPayload() {
         AuthorizationRequest authorizationRequest = new AuthorizationRequest(
-                randLong(), randLong(), randLong(), randLong(),
+                randLong(), randLong(), randLong(),
                 Math.abs(new Random().nextDouble()), RandomStringUtils.randomAlphabetic(8), new Date());
         return authorizationRequest;
     }
@@ -42,5 +42,10 @@ public class OutputProcessorTester {
 
     private long randomLong(long min, long max) {
         return (new Random().nextLong() % (max - min)) + min;
+    }
+
+    private Long getRandomCardNumber() {
+//        new Random().
+
     }
 }

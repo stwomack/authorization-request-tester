@@ -20,10 +20,9 @@ import java.util.Random;
 @EnableBinding(Source.class)
 public class OutputProcessorTester {
     private static final int MESSAGE_COUNT = 1;
-    ObjectMapper mapper = new ObjectMapper();
 
     @Bean
-    @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedDelay = "${fixedDelay}", maxMessagesPerPoll = "1"))
+    @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedDelay = "${fixedDelay}", maxMessagesPerPoll = "2"))
     public MessageSource<AuthorizationRequest> go() throws IOException {
         return () -> new GenericMessage<>(createTestPayload());
     }

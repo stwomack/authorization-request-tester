@@ -2,7 +2,6 @@ package io.pivotal.service;
 
 import io.pivotal.domain.AuthorizationRequest;
 import org.apache.commons.lang3.RandomStringUtils;
-import org.springframework.cloud.cloudfoundry.com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;

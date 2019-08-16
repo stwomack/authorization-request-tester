@@ -1,6 +1,6 @@
 ---
 instances: 1
-memory: 512M
+memory: 756M
 applications:
   - name: authorization-request-tester
     host: testerz
